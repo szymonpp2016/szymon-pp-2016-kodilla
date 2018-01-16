@@ -5,7 +5,6 @@ import org.junit.*;
 import com.kodilla.testing.collection.OddNumbersExterminator;
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 public class CollectionTestSuite {
 
