@@ -51,9 +51,7 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorEmptyList() {
         //Given
         ArrayList<Integer> number = new ArrayList<Integer>();
-
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator(number);
-
         //When
         ArrayList<Integer> result2 = oddNumbersExterminator.exterminate(number);
         System.out.println("Testing void list" + result2);
