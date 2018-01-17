@@ -3,7 +3,6 @@ package com.kodilla.testing.shape;
 import org.junit.*;
 
 import com.kodilla.testing.shape.ShapeCollector;
-import java.util.*;
 import java.lang.*;
 
 public class ShapeCollectorTestSuite {
@@ -13,7 +12,6 @@ public class ShapeCollectorTestSuite {
     @Before
     public void before() {
         testCounter++;
-
         System.out.println("Preparing to execute test #" + testCounter);
     }
 
