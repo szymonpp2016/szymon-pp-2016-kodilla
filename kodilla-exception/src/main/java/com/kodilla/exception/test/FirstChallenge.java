@@ -10,7 +10,6 @@ public class FirstChallenge {
     }
 
     public static void main(String[] args) {
-
         FirstChallenge firstChallenge = new FirstChallenge();
         double result;
         try {
