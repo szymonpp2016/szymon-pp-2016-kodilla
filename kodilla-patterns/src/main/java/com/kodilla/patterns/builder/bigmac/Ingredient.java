@@ -10,7 +10,6 @@ public class Ingredient {
     final static String CHAMPIGNONS = "CHAMPIGNONS";
     final static String SHRIMPS = "SHRIMPS";
 
-
     public Ingredient() {
     }
 

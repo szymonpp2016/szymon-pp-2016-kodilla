@@ -8,7 +8,6 @@ public class BigmacTestSuite {
     @Test
     public void testPizzaNew() {
         //Given
-
         Bigmac bigmac = new Bigmac.BigmacBuilder()
                 .ingredient(Ingredient.SALAD)
                 .burgers(2)

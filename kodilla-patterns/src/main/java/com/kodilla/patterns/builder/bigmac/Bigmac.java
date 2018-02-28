@@ -10,8 +10,6 @@ public class Bigmac {
         private final String sauce;
         private final List<String> ingredients;
 
-
-
         public static class BigmacBuilder {
 
             private String roll;
@@ -29,6 +27,7 @@ public class Bigmac {
                 this.sauce = sauce;
                 return this;
             }
+
             public BigmacBuilder burgers(Integer burgers) {
                 this.burgers= burgers;
                 return this;
