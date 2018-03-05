@@ -16,4 +16,4 @@ SELECT  U.FIRSTNAME, U.LASTNAME, I.USER_ID_ASSIGNEDTO AS USER_ID, COUNT(*) AS PO
 FROM issuess I, users U
 WHERE I.USER_ID_ASSIGNEDTO = U.ID
 GROUP BY U.FIRSTNAME, U.LASTNAME
-HAVING COUNT(*) > 1 or count(*)=1;
+HAVING COUNT(*) > 1 or count(*)=1;  //dla zabawy  of course >0 jest k :)
