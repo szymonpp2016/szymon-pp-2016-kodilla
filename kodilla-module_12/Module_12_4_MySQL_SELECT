@@ -1,0 +1,19 @@
+select * from issuess;
+select * from issueslists;
+select * from users;
+
+
+SELECT  IL.NAME, I.SUMMARY
+FROM issuess I, issueslists IL
+WHERE I.ISSUESLIST_ID = IL.ID;
+
+
+SELECT  I.SUMMARY, U.FIRSTNAME, U.LASTNAME
+FROM issuess I, users U
+WHERE I.USER_ID_ASSIGNEDTO = U.ID;
+
+SELECT  U.FIRSTNAME, U.LASTNAME, I.USER_ID_ASSIGNEDTO AS USER_ID, COUNT(*) AS POST_NUMBER
+FROM issuess I, users U
+WHERE I.USER_ID_ASSIGNEDTO = U.ID
+GROUP BY U.FIRSTNAME, U.LASTNAME
+HAVING COUNT(*) > 1 or count(*)=1;
