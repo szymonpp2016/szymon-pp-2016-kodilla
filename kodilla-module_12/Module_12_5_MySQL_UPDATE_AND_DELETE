@@ -1,0 +1,22 @@
+select * From posts;
+
+INSERT INTO POSTS (USER_ID, BODY)
+VALUES (2, "This is new post");
+ALTER TABLE posts AUTO_INCREMENT = 1;
+
+select * From posts; //by widzieć zmiany w workbenchu
+
+UPDATE POSTS
+SET BODY = "To delete post"
+WHERE BODY =  "This is new post";
+
+commit;
+
+select * From posts; //by widzieć zmiany w workbenchu
+
+DELETE FROM POSTS
+WHERE BODY="To delete post";
+
+select * From posts;
+
+commit;
