@@ -1,6 +1,6 @@
 package com.kodilla.patterns.builder.bigmac;
 
-public class Ingredient {
+final public class Ingredient {
     final static String SALAD = "SALAD";
     final static String ONION = "ONION";
     final static String BACON = "BACON";
@@ -10,7 +10,7 @@ public class Ingredient {
     final static String CHAMPIGNONS = "CHAMPIGNONS";
     final static String SHRIMPS = "SHRIMPS";
 
-    public Ingredient() {
+    private Ingredient() {
     }
 
    /* public Ingredient1(String ingredient) {
