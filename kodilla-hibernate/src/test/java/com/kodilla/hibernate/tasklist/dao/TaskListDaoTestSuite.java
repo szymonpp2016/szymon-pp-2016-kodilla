@@ -103,5 +103,19 @@ public class TaskListDaoTestSuite {
         //CleanUp
         taskListDao.deleteAll();
     }
+    @Test
+    public void testTaskDaoFindByListName_4() {
+        //Given
+        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
+        taskListDao.save(taskList);
+
+        //When
+        int listNameInt = taskListDao.countByListName(LISTNAME);
+
+        //Then
+        assertEquals(1, listNameInt);
+        //CleanUp
+        taskListDao.deleteAll();
+    }
 
 }
