@@ -5,12 +5,23 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
-        name = "CompanyHQL.retrieveCompanyNameByTreeLetters",
-        query = "SELECT * FROM COMPANIESHQL " +
-                "WHERE SUBSTR(COMPANY_NAME, 1, 3) = :COMPANY_NAME",
-        resultClass = CompanyHQL.class
-)
+
+
+@NamedNativeQueries(
+        {
+                @NamedNativeQuery(
+                        name = "CompanyHQL.retrieveCompanyNameByTreeLetters",
+                        query = "SELECT * FROM COMPANIESHQL " +
+                                "WHERE SUBSTR(COMPANY_NAME, 1, 3) = :COMPANY_NAME",
+                        resultClass = CompanyHQL.class
+                ),
+
+
+                @NamedNativeQuery(
+                        name = "CompanyHQL.retrieveCompanyNameByPartOfName",
+                        query = "SELECT * FROM COMPANIESHQL WHERE COMPANY_NAME LIKE CONCAT('%', :COMPANY_NAME_FRAGMENT, '%') ORDER BY COMPANY_NAME",
+                resultClass = CompanyHQL.class
+) })
 
 @Entity
 @Table(name = "COMPANIESHQL")
@@ -47,7 +58,8 @@ public class CompanyHQL {
     private void setName(String name) {
         this.name = name;
     }
-@ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
+
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<EmployeeHQL> getEmployees() {
         return employees;
     }

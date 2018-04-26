@@ -17,10 +17,10 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class InvoiceDaoTestSuite {
-    @Autowired
+  /*  @Autowired
     private InvoiceDao invoiceDao;
 
     private static final String DESCRIPTION = "Test:LearnHibernate";
@@ -81,7 +81,7 @@ public class InvoiceDaoTestSuite {
         //CleanUp
          //invoiceDao.delete(id);
 
-    }
+    } */
 
 
 }

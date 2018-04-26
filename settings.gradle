@@ -9,5 +9,9 @@ include 'kodilla-spring-intro'
 include 'kodilla-spring-web'
 include 'kodilla-module_12_3'
 include 'kodilla-jdbc'
-include 'kodilla-hibernate'
+include 'kodilla-module_14'
+include 'kodilla-sudoku'
+include "kodilla-hibernate"
+include 'src'
+
 

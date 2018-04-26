@@ -5,11 +5,16 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQueries({
+@NamedQueries({ //wymagane NAmed Queries - jesli jest więcej niż jedno zapytanie!
         @NamedQuery(
                 name = "EmployeeHQL.retrieveWorkerByLastName",
                 query = "FROM EmployeeHQL WHERE workerLastName = :WORKERLASTNAME"
-        )
+        ),
+        @NamedQuery(
+                name = "EmployeeHQL.retrieveWorkerByPartOfName",
+                 query = "FROM EmployeeHQL WHERE workerLastName LIKE CONCAT('%', :WORKER_PART_OF_NAME, '%') ORDER BY workerLastName, workerLastName"
+               )
+
 })
 
 @Entity
@@ -55,6 +60,7 @@ public class EmployeeHQL {
     private void setWorkerFirstName(String workerFirstName) {
         this.workerFirstName = workerFirstName;
     }
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable( name = "JOIN_COMPANY_EMPLOYEEHQL",
             joinColumns = {@JoinColumn(name = "EMPLOYEE_ID", referencedColumnName = "EMPLOYEE_ID")},

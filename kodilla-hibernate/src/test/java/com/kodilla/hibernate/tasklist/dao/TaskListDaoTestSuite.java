@@ -1,5 +1,6 @@
 package com.kodilla.hibernate.tasklist.dao;
 
+import com.kodilla.hibernate.task.Task;
 import com.kodilla.hibernate.tasklist.TaskList;
 import org.junit.*;
 import org.junit.runner.RunWith;
@@ -36,6 +37,7 @@ public class TaskListDaoTestSuite {
     private static final String DESCRIPTION = "Test: Learn Hibernate";
     private static final String LISTNAME = "Tabela nr 1";
 
+
     @Test
     public void testTaskDaoSave() {
         //Given
@@ -63,7 +65,7 @@ public class TaskListDaoTestSuite {
         List<TaskList> readTasks = taskListDao.findByListName(LISTNAME);
 
         //Then
-        assertEquals(LISTNAME, readTasks.get(0).getlistName());
+        assertEquals(LISTNAME, readTasks.get(0).getListName());
 
         //CleanUp
         int id = readTasks.get(0).getId();
@@ -85,7 +87,7 @@ public class TaskListDaoTestSuite {
         assertEquals(true, listName);
 
         //CleanUp
-        taskListDao.deleteAll();
+         taskListDao.deleteAll();
     }
 
     @Test
@@ -115,7 +117,8 @@ public class TaskListDaoTestSuite {
         //Then
         assertEquals(1, listNameInt);
         //CleanUp
-        taskListDao.deleteAll();
+       taskListDao.deleteAll();
     }
+
 
 }
