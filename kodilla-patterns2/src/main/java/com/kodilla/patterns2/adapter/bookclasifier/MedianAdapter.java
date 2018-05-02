@@ -12,8 +12,8 @@ import java.util.Map;
 import java.util.Set;
 
 
-public class MedianAdapter  implements Classifier {
-    private MedianAdaptee medianAdaptee = new MedianAdaptee();
+public class MedianAdapter extends MedianAdaptee implements Classifier {
+
 
     @Override
     public int publicationYearMedian(Set<BookLibraryA> theBookLibraryASet) {
@@ -23,7 +23,7 @@ public class MedianAdapter  implements Classifier {
             mapOfBooks.put(new BookSignature(books.getSignature()),
                     new BookLibraryB(books.getAuthor(), books.getTitle(), books.getPublicationYear()));
         }
-        return medianAdaptee.medianPublicationYear(mapOfBooks);
+        return medianPublicationYear(mapOfBooks);
     }
 
 
@@ -34,7 +34,7 @@ public class MedianAdapter  implements Classifier {
             mapOfBooks.put(new BookSignature(books.getSignature()),
                     new BookLibraryB(books.getAuthor(), books.getTitle(), books.getPublicationYear()));
         }
-        return medianAdaptee.averagePublicationYear(mapOfBooks);
+        return averagePublicationYear(mapOfBooks);
     }
 
 /*
