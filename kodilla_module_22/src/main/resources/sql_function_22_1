@@ -8,7 +8,7 @@ BEGIN
     if userId <= 0 then
     set result = 'wrong args';
      elseif userId >= 1 then
-     set result = (Select FIRSTNAME FROM users where users.id=userId);
+     set result = (Select FIRSTNAME FROM readers where readers.READER_ID=userId);
 
     end if;
         return result;
