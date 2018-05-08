@@ -1,0 +1,45 @@
+# ALTER TABLE BOOKS ADD BESTSELLER BOOLEAN;
+
+
+Drop procedure if exists UpdateBookLevels;
+
+DELIMITER $$
+
+CREATE PROCEDURE UpdateBookLevels()
+begin
+Declare booksread, days, book_TEMP_ID int;
+declare finished int default 0;
+
+declare book_read cursor for select BOOK_ID from books;
+declare continue handler for not found set finished =1;
+
+open book_read;
+while(finished=0) Do
+	fetch book_read into book_TEMP_ID;
+
+	if (Finished =0) then
+		select count(*) from rents
+		where book_id=book_TEMP_ID  and  month(rent_date)= XXXX
+		into booksread;
+
+		if(booksread>2) then
+        update books set bestseller = true
+        where book_id=book_TEMP_ID;
+        end if;
+
+        if(booksread<=2||null) then
+        update books set bestseller = false
+        where book_id=book_TEMP_ID;
+        end if;
+
+		commit;
+	end if;
+	end while;
+
+close book_read;
+
+end $$
+
+DELIMITER ;
+
+call UpdateBookLevels();
