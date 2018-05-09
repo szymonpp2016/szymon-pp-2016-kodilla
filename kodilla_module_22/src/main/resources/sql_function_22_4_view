@@ -17,7 +17,6 @@ SELECT count(*)
 from  books bk
 where bk.bestseller = true;
 
-
 commit;
 use kodilla_course;
 select * from BESTSELLERS_COUNT;
