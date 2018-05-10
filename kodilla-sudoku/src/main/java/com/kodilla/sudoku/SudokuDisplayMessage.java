@@ -1,5 +1,7 @@
 package com.kodilla.sudoku;
 
+import java.util.concurrent.TimeUnit;
+
 public class SudokuDisplayMessage {
 
     void welcome(){
@@ -28,11 +30,19 @@ public class SudokuDisplayMessage {
         System.out.print("You type (x,y,wartosc): "+x+","+y+","+cellNumber);
     }
 
-    void nextGameAsk(){
+    void nextRoundAsk(){
         System.out.println("\n How is your decision? Enter: " +
-                "\n [0 + Enter] - play still the game  "+
-                "\n [1 + Enter] - Computer callculeting (end game) ");
+                "\n [Y + Enter] - play still the game  "+
+                "\n [N + Enter] - Computer callculeting (end game) ");
         System.out.print(":");
+    }
+    void nextRound() {
+        try {
+            System.out.print(" \n next round!\n\n");
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 

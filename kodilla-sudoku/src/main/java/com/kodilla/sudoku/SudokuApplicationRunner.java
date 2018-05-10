@@ -1,12 +1,13 @@
 package com.kodilla.sudoku;
 
-public class SudokuRunner {
+public class
+SudokuApplicationRunner {
     public static void main(String[] args) {
         boolean gameFinished = false;
-        SudokuGame SudokuGame = new SudokuGame();
+        SudokuGame sudokuGame = new SudokuGame();
 
         while(!gameFinished) {
-        gameFinished = SudokuGame.resolveSudoku();
+        gameFinished = sudokuGame.resolveSudoku();
         }
     }
 }

@@ -1,24 +1,21 @@
 package com.kodilla.sudoku;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.Collections;
+        import java.util.List;
 
 public class SudokuElement {
 
     private  int value;
-    public static int EMPTY = -1;
-    public List<Integer> possibleValues = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
+    public static int EMPTY = -1;  //to jest przygotowanie do rozwiazania - gdzie -1 oznacza brak warości -zamiast kasowania z tablicy
+    List<Integer> possibleValues= new ArrayList<>();
 
-     public SudokuElement(int value) {
-         this.value = value;
+    public void resetPossibleValoues() {
+        possibleValues.clear();
+        Collections.addAll(possibleValues, 1, 2, 3, 4,5,6,7,8,9);
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
+    public void removeValue(Integer valoue){
+        possibleValues.remove(valoue);
     }
 }
