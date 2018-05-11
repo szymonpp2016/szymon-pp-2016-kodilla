@@ -23,7 +23,7 @@ while(finished=0) Do
 		set BOOKSPERMONTH = BOOKSREAD / (DAYS / 30);
 
 
-		if(BOOKSPERMONTH>2) then
+		if(BOOKSPERMONTH>2&&BOOKSREAD>2) then
         update books set bestseller = true
         where book_id=book_TEMP_ID;
         else
@@ -31,7 +31,7 @@ while(finished=0) Do
         where book_id=book_TEMP_ID;
         end if;
 
-      	commit;
+		commit;
 	end if;
 	end while;
 
