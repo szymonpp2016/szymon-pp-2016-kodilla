@@ -1,16 +1,13 @@
-# ALTER TABLE BOOKS ADD BESTSELLER BOOLEAN;
-
-
 Drop procedure if exists UpdateBookLevels;
 
 DELIMITER $$
 
 CREATE PROCEDURE UpdateBookLevels()
 begin
-Declare booksread, days, book_TEMP_ID int;
+Declare booksread, days, book_TEMP_ID, BOOKSPERMONTH int;
 declare finished int default 0;
 
-declare book_read cursor for select BOOK_ID from books;
+declare book_read cursor for select BOOK_ID  from books;
 declare continue handler for not found set finished =1;
 
 open book_read;
@@ -19,20 +16,22 @@ while(finished=0) Do
 
 	if (Finished =0) then
 		select count(*) from rents
-		where book_id=book_TEMP_ID  and  month(rent_date)= XXXX
-		into booksread;
+		where book_id=book_TEMP_ID 	into booksread;
 
-		if(booksread>2) then
+        select datediff(max(RENT_DATE), min(RENT_DATE)) +1 from rents
+		where BOOK_ID = book_TEMP_ID into DAYS;
+		set BOOKSPERMONTH = BOOKSREAD / (DAYS / 30);
+
+
+		if(BOOKSPERMONTH>2) then
         update books set bestseller = true
         where book_id=book_TEMP_ID;
-        end if;
-
-        if(booksread<=2||null) then
+        else
         update books set bestseller = false
         where book_id=book_TEMP_ID;
         end if;
 
-		commit;
+      	commit;
 	end if;
 	end while;
 
@@ -43,3 +42,5 @@ end $$
 DELIMITER ;
 
 call UpdateBookLevels();
+
+select * from books;
