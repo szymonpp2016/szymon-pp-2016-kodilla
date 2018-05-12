@@ -18,5 +18,4 @@ public interface CompanyDaoHQL extends CrudRepository<CompanyHQL, Integer> {
 
     @Query
     List<CompanyHQL> retrieveCompanyNameByPartOfName(@Param("COMPANY_NAME_FRAGMENT") String partOfCompanyName );
-
 }
