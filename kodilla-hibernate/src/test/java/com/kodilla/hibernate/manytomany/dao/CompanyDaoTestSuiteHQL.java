@@ -87,15 +87,15 @@ public class CompanyDaoTestSuiteHQL {
         int lindaKovalskyId = lindaKovalsky.getId();
 
         List<EmployeeHQL> EmployeeList = employeeDao.retrieveWorkerByLastName("Smith");
-
+        System.out.println("\n \n \n"+EmployeeList.size()+"\n \n \n");
         //Then
-         assertNotEquals(1, EmployeeList.size());
+         assertEquals(1, EmployeeList.size());
 
         //CleanUp
         try {
-            companyDao.delete(johnSmithId);
-            companyDao.delete(stephanieClarcksonId);
-            companyDao.delete(lindaKovalskyId);
+            employeeDao.delete(johnSmithId);
+            employeeDao.delete(stephanieClarcksonId);
+            employeeDao.delete(lindaKovalskyId);
         } catch (Exception e) {
             //    //do nothing
         }

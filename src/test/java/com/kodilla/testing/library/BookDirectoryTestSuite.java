@@ -109,7 +109,7 @@ public class BookDirectoryTestSuite {
         assertEquals(0, theListOfBooks10.size());
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
 
-    
+
 
     }
     @Test
@@ -118,7 +118,7 @@ public class BookDirectoryTestSuite {
         BookLibrary bookLibraryMock = mock(BookLibrary.class);
         LibraryUser libraryUseryMock = mock(LibraryUser.class);
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
-        List<String> listOfBooks = new ArrayList<String>();
+        List<Book> listOfBooks = new ArrayList<>();
         when(bookLibraryMock.listBooksInHandsOf(libraryUseryMock)).thenReturn(listOfBooks);
 
         //When
@@ -135,8 +135,8 @@ public class BookDirectoryTestSuite {
         BookLibrary bookLibraryMock = mock(BookLibrary.class);
         LibraryUser libraryUseryMock = mock(LibraryUser.class);
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
-        List<String> listOfBooks = new ArrayList<String>();
-        listOfBooks.add("LOTR");
+        List<Book> listOfBooks = new ArrayList<>();
+        listOfBooks.add(new Book("Secrets of Alamo", "John Smith", 2008));
         when(bookLibraryMock.listBooksInHandsOf(libraryUseryMock)).thenReturn(listOfBooks);
 
         //When
@@ -154,9 +154,9 @@ public class BookDirectoryTestSuite {
         BookLibrary bookLibraryMock = mock(BookLibrary.class);
         LibraryUser libraryUseryMock = mock(LibraryUser.class);
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
-        List<String> listOfBooks = new ArrayList<String>();
+        List<Book> listOfBooks = new ArrayList<>();
         for(int i=0;i<5;i++){
-            listOfBooks.add("LOTR");
+            listOfBooks.add(new Book("Secrets of Alamo", "John Smith", 2008));
         }
         when(bookLibraryMock.listBooksInHandsOf(libraryUseryMock)).thenReturn(listOfBooks);
 

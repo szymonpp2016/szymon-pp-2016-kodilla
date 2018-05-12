@@ -24,7 +24,7 @@ public class StreamMain {
 
         //Zadanie modul 7.3
         Forum forum = new Forum();
-        System.out.println("\n Stream filtering - forum  user sex - M , post number - more then 0, younger then 20");
+        System.out.println("\n Stream filtering - immutable  user sex - M , post number - more then 0, younger then 20");
 
        Map<Integer, ForumUser> theResultUserList = forum.getTheUserList().stream()
                 .filter(forumUser -> forumUser.getBirthDate().isAfter(LocalDate.of(2001,01,01) ) ) // alternatywnie getYear() > 2001)
@@ -79,7 +79,7 @@ public class StreamMain {
 
     public static void  modul73ListVersion() {
         Forum forum = new Forum();
-        System.out.println("\n Stream filtering - forum  user sex - F , post number - more then 0, younger then 20");
+        System.out.println("\n Stream filtering - immutable  user sex - F , post number - more then 0, younger then 20");
         System.out.println("\n the list \n");
         forum.getTheUserList().stream()
                 .filter(forumUser -> forumUser.getBirthDate().getYear() > 2001)

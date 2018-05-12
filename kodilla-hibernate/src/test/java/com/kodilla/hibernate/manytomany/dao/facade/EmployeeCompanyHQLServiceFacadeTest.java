@@ -27,8 +27,7 @@ public class EmployeeCompanyHQLServiceFacadeTest {
     @Autowired
     EmployeeDaoHQL employeeDao;
 
-    @BeforeClass
-    public static void beforeClass() {
+     public static void beforeClass() {
         System.out.println("Test Kodilla module 20.1 FACADE:  begin"); }
     @AfterClass
     public static void afterClass() {
@@ -59,6 +58,8 @@ public class EmployeeCompanyHQLServiceFacadeTest {
         int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
+
+
 
 
         List<CompanyHQL> CompanyListWithOneExistPartOfName = companyDao.retrieveCompanyNameByPartOfName("Gr");
@@ -112,6 +113,7 @@ public class EmployeeCompanyHQLServiceFacadeTest {
             employeeDao.delete(johnSmithId);
             employeeDao.delete(stephanieClarcksonId);
             employeeDao.delete(lindaKovalskyId);
+
         } catch (Exception e) {
             //    //do nothing
         }

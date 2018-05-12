@@ -1,6 +1,6 @@
 package com.kodilla.patterns.builder.bigmac;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class BigmacTestSuite {
@@ -20,8 +20,12 @@ public class BigmacTestSuite {
         System.out.println(bigmac);
         //When
         int howManyIngredients = bigmac.getIngredients().size();
+
         //Then
-        Assert.assertEquals(4, howManyIngredients);
+        assertEquals(4, howManyIngredients);
+        assertEquals("without sesame", bigmac.getRoll());
+        assertEquals(2, bigmac.getBurgers());
+        assertEquals("barbecue", bigmac.getSauce());
     }
 }
 

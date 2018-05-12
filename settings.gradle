@@ -13,5 +13,7 @@ include 'kodilla-module_14'
 include 'kodilla-sudoku'
 include "kodilla-hibernate"
 include 'src'
-
+include 'kodilla_module_22'
+include 'kodilla_module_22'
+include 'kodilla-testing2'
 
