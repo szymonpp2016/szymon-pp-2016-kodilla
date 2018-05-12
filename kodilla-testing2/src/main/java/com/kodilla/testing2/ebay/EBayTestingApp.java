@@ -13,7 +13,6 @@ public class EBayTestingApp {
     public static void main(String[] args) {
         EBayTestingApp testApp = new EBayTestingApp();
         testApp.testWith(WebDriverConfig.CHROME);
-        testApp.testWith(WebDriverConfig.FIREFOX);
     }
 
     private void testWith(String browser) {
@@ -27,5 +26,5 @@ public class EBayTestingApp {
         WebElement searchField = driver.findElement(By.id(SEARCHFIELD));
         searchField.sendKeys("Laptop for dummies");
         searchField.submit();
-    }
+     }
 }
