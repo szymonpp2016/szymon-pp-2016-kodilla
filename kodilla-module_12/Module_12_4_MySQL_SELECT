@@ -2,11 +2,9 @@ select * from issuess;
 select * from issueslists;
 select * from users;
 
-
 SELECT  IL.NAME, I.SUMMARY
 FROM issuess I, issueslists IL
 WHERE I.ISSUESLIST_ID = IL.ID;
-
 
 SELECT  I.SUMMARY, U.FIRSTNAME, U.LASTNAME
 FROM issuess I, users U
