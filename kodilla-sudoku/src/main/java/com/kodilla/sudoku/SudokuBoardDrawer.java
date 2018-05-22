@@ -3,31 +3,41 @@ package com.kodilla.sudoku;
 import java.util.stream.IntStream;
 
 public class SudokuBoardDrawer {
-
     private final static int MIN_INDEX = 1;
     private final static int MAX_INDEX = 9;
 
     public void drawingSudokuTable(SudokuBoard sudokuBoard) {
         int[][] board=sudokuBoard.getSudokuArray();
-
-        StringBuilder TableHolderAsString = new StringBuilder("\n");
-        for (int n = MIN_INDEX; n <= MAX_INDEX; n++) {
-            if (n == 1) rowNumberDrawer();
-            if (n == 1) TableHolderAsString.append(edgeLineDrawer()).append("\n");
-            TableHolderAsString.append(n).append(" |");
-            for (int k = MIN_INDEX; k <= MAX_INDEX; k++) {
-                if (board[k][n] == 0) {
-                    TableHolderAsString.append(" . ");
-                } else {
-                    TableHolderAsString.append(" ").append(board[k][n]).append(" ");
-                }
-                if (k % 3 == 0) TableHolderAsString.append("|");
-            }
-            TableHolderAsString.append("\n");
-            if (n % 3 == 0) TableHolderAsString.append(edgeLineDrawer()).append("\n");
-        }
-        System.out.println(TableHolderAsString);
+        System.out.println(tableBuilde(board));
     }
+
+    private StringBuilder tableBuilde(int[][] board) {
+        StringBuilder tableHolderAsString = new StringBuilder("\n");
+        for (int row = MIN_INDEX; row <= MAX_INDEX; row++) {
+            if (row == 1) {
+                rowNumberDrawer();
+                tableHolderAsString.append(edgeLineDrawer()).append("\n");
+            }
+            tableHolderAsString.append(row).append(" |");
+            rowBuilder(board,tableHolderAsString ,row );
+            tableHolderAsString.append("\n");
+            if (row % 3 == 0) tableHolderAsString.append(edgeLineDrawer()).append("\n");
+        }
+        return tableHolderAsString;
+    }
+
+    private StringBuilder rowBuilder(int[][] board,StringBuilder tableHolderAsString, int row ) {
+        for (int column = MIN_INDEX; column <= MAX_INDEX; column++) {
+            if (board[column][row] == 0) {
+                tableHolderAsString.append(" . ");
+            } else {
+                tableHolderAsString.append(" ").append(board[column][row]).append(" ");
+            }
+            if (column % 3 == 0) tableHolderAsString.append("|");
+        }
+        return tableHolderAsString;
+    }
+
 
     private void rowNumberDrawer() {
         System.out.print("  ");
@@ -37,6 +47,7 @@ public class SudokuBoardDrawer {
                     if(n%3==0) System.out.print(" ");
                 });
     }
+
 
     private String edgeLineDrawer() {
         final String[] result = {"  "};

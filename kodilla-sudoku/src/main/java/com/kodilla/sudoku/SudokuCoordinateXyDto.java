@@ -2,18 +2,18 @@ package com.kodilla.sudoku;
 
 public class SudokuCoordinateXyDto {
 
-    private int xAxiesCoordinate;
-    private int yAxiesCoordinate;
-    SudokuCoordinateXyDto(int x, int y) {
-        this.xAxiesCoordinate =x;
-        this.yAxiesCoordinate =y;
+    private int xColumnCoordinate;
+    private int yRowCoordinate;
+    SudokuCoordinateXyDto(int xColumn, int yRow) {
+        this.xColumnCoordinate =xColumn;
+        this.yRowCoordinate =yRow;
     }
 
-    public int getX() {
-        return xAxiesCoordinate;
+    public int getXcolumn() {
+        return xColumnCoordinate;
     }
 
-    public int getY() {
-        return yAxiesCoordinate;
+    public int getYrow() {
+        return yRowCoordinate;
     }
 }

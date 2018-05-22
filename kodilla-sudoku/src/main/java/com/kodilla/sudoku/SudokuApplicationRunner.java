@@ -4,10 +4,13 @@ public class
 SudokuApplicationRunner {
     public static void main(String[] args) {
         boolean gameFinished = false;
-        SudokuGame sudokuGame = new SudokuGame();
 
+        SudokuDisplayMessage.welcome();
+        SudokuDisplayMessage.rule();
+
+        SudokuGame sudokuGame = new SudokuGame();
         while(!gameFinished) {
-        gameFinished = sudokuGame.resolveSudoku();
+            gameFinished = sudokuGame.resolveSudoku();
         }
     }
 }

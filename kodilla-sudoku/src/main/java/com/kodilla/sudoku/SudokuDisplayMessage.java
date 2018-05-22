@@ -4,11 +4,11 @@ import java.util.concurrent.TimeUnit;
 
 public class SudokuDisplayMessage {
 
-    void welcome(){
+    static void welcome(){
         System.out.println("Welcome to the game: Sudoku");
     }
 
-    void rule(){
+    static void rule(){
         System.out.println("Game rules:\n" +
                 " * Sudoku rozgrywa się na planszy o rozmiarach 9x9 pól,\n" +
                 "   częściowo wypełnionej liczbami. ,\n" +
@@ -22,21 +22,21 @@ public class SudokuDisplayMessage {
                 " Na powyższej ilustracji możesz zobaczyć, że plansza dzieli się na 9 takich bloków. ");
     }
 
-    void giveYourCellAnswer(){
+    static void giveYourCellAnswer(){
         System.out.print("Give your answer (x <enter>,y<enter>,wartosc<enter>)  :");
     }
 
-    void yourAnswerIS(int x, int y, int cellNumber){
+    static void yourAnswerIS(int x, int y, int cellNumber){
         System.out.print("You type (x,y,wartosc): "+x+","+y+","+cellNumber);
     }
 
-    void nextRoundAsk(){
+    static void nextRoundAsk(){
         System.out.println("\n How is your decision? Enter: " +
                 "\n [Y + Enter] - play still the game  "+
                 "\n [N + Enter] - Computer callculeting (end game) ");
         System.out.print(":");
     }
-    void nextRound() {
+    static void nextRound() {
         try {
             System.out.print(" \n next round!\n\n");
             TimeUnit.SECONDS.sleep(3);

@@ -4,13 +4,13 @@ import org.apache.commons.lang3.Range;
 
 public class SudokuValidateInputNumber {
 
-    public void validateInputNumber(int x, int y, int  cellNumber) {
+    public void validateInputNumber(int columnNumber, int rowNumber, int  cellValoue) {
         final Range<Integer> between = Range.between(1, 10);
 
-        if (between.contains(x)&&between.contains(y)&&between.contains(cellNumber)) {
+        if (between.contains(columnNumber)&&between.contains(rowNumber)&&between.contains(cellValoue)) {
             System.out.println("Input value correct!!");
         } else {
-            throw new IllegalStateException("Bad number input!!!");
+            System.out.println("Bad number input!!!");
         }
     }
 }

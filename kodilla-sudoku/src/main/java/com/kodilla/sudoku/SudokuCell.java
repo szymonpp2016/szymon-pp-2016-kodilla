@@ -1,10 +1,10 @@
 package com.kodilla.sudoku;
 
-        import java.util.ArrayList;
-        import java.util.Collections;
-        import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class SudokuElement {
+public class SudokuCell {
 
     private  int value;
     public static int EMPTY = -1;  //to jest przygotowanie do rozwiazania - gdzie -1 oznacza brak warości -zamiast kasowania z tablicy
