@@ -2,7 +2,10 @@ package com.kodilla.sudoku;
 
 import java.util.concurrent.TimeUnit;
 
-public class SudokuDisplayMessage {
+public final class SudokuDisplayMessage {
+
+    private SudokuDisplayMessage() {
+    }
 
     static void welcome(){
         System.out.println("Welcome to the game: Sudoku");
