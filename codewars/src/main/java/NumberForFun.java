@@ -1,19 +1,16 @@
-public class NumberFun {
-    private static long findNxSquare(long sq) {
-        int result;
+public class NumberForFun {
+    private static long findNextSquare(long sq) {
+        long result=0L;
         double findNextSquareDouble = Math.sqrt((double) sq);
         int findNextSquareInt = (int) Math.sqrt((double) sq);
-        if (findNextSquareDouble == findNextSquareInt) result = (int) Math.pow(findNextSquareInt + 1, 2);
-        else result = -1;
-        return result;
+        return findNextSquareDouble == findNextSquareInt ? (long) Math.pow(findNextSquareInt + 1, 2) :  -1L;
     }
 
     public static void main(String[] args) {
-        System.out.println(findNxSquare(121));
+        System.out.println(findNextSquare(121));
     }
 
-
-//best answer
+    //best answer
     public class NumberFunBest {
         public long findNextSquare(long sq) {
             long root = (long) Math.sqrt(sq);
@@ -21,3 +18,4 @@ public class NumberFun {
         }
     }
 }
+
