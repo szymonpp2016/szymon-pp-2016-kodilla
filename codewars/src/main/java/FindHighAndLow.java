@@ -1,8 +1,6 @@
 import java.util.Arrays;
 
 public class FindHighAndLow {
-
-
     public static String HighAndLow(String numbers) {
 
         int tempMax;
@@ -19,7 +17,6 @@ public class FindHighAndLow {
 
             if(arrayIntList[i]>tempMax) tempMax=arrayIntList[i];
             if(arrayIntList[i]<tempMin) tempMin=arrayIntList[i];
-
         }
         System.out.println(tempMax+" "+tempMin);
         return tempMax+" "+tempMin;

@@ -1,0 +1,22 @@
+
+ Shop: suplier1, product: pietruszka, zadanie wykonane: false
+
+ Shop: suplier1, product: pietruszka, zadanie wykonane: false
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true
+
+ Shop: suplier2, product: pietruszka, zadanie wykonane: true

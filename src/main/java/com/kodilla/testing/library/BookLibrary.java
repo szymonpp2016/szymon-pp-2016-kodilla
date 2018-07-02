@@ -23,21 +23,17 @@ public class BookLibrary {
     public List<String> userNames() {
         return Collections.emptyList();
     }
-public List<String> BookInHand() {
+    public List<String> BookInHand() {
         return Collections.emptyList();
     }
 
-    public List<String> listBooksInHandsOf(LibraryUser libraryUser) {
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
 
-        /*BookInhHand = libraryUser.booksNames().size();
-     ;
-
-        if (userCount == 0) {
-            averagePostPerUser = 0;
-            averageCommentsPerPost = 0;
-            averageCommentsPerUser = 0;
-
-        } */
-    return Collections.emptyList();
+        List<Book> bookList = new ArrayList<Book>();
+        List<Book> resultList = libraryDatabase
+                .listBooksInHandsOf(libraryUser);
+        if(resultList.size() == 0) return bookList;
+        bookList = resultList;
+        return bookList;
     }
 }

@@ -1,9 +1,11 @@
-package com.kodilla.sudoku;
+package com.kodilla.sudoku.tmp;
 
 
+import com.kodilla.sudoku.SudokuBoard;
+import com.kodilla.sudoku.SudokuProcess;
 
 public class SudokuResolverOld {
-    public final static int MIN_INDEX = 1;
+ /*   public final static int MIN_INDEX = 1;
     public final static int MAX_INDEX = 9;
     private SudokuProcess sudokuProcess = new SudokuProcess();
     //SudokuElement sudokuElement = new SudokuElement();
@@ -21,7 +23,7 @@ public class SudokuResolverOld {
                     while (!aceptableAnswer) {
                         cellNumber ++;
                         if(cellNumber==tempNumberofPrevieCell) cellNumber++;
-                        board = sudokuBoard.getSudokuNumber();
+                        board = sudokuBoard.getSudokuArray();
                         aceptableAnswer = sudokuProcess.testGoodInput(board, k, n, cellNumber);
 
                         if (cellNumber > 9) {
@@ -29,10 +31,10 @@ public class SudokuResolverOld {
                             aceptableAnswer = true;
                         }
                     }
-                    sudokuBoard.setSudokuNumber(cellNumber, k, n);
+                    sudokuBoard.setSudokuArray(cellNumber, k, n);
                 }
             }
         }
-        sudokuBoard.drawingTableWithToStringRowResult();
-    }
+        sudokuBoard.drawingSudokuTable();
+    } */
 }

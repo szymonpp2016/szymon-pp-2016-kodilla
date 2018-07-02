@@ -1,9 +1,11 @@
-package com.kodilla.sudoku;
+package com.kodilla.sudoku.tmp;
 
 
+import com.kodilla.sudoku.SudokuBoard;
+import com.kodilla.sudoku.SudokuProcess;
 
 public class SudokuResolver {
-    public final static int MIN_INDEX = 1;
+  /*  public final static int MIN_INDEX = 1;
     public final static int MAX_INDEX = 9;
     private SudokuProcess sudokuProcess = new SudokuProcess();
     //SudokuElement sudokuElement = new SudokuElement();
@@ -22,7 +24,7 @@ public class SudokuResolver {
                         cellNumber ++;
                         if(cellNumber==tempNumberofPrevieCell) cellNumber++;
                         wrongAnswer = 0;
-                        board = sudokuBoard.getSudokuNumber();
+                        board = sudokuBoard.getSudokuArray();
                         aceptableAnswer = sudokuProcess.testGoodInput(board, k, n, cellNumber);
                         System.out.println(n+" "+k+"  "+cellNumber+"  "+aceptableAnswer);
                         if (cellNumber > 9) {
@@ -36,10 +38,10 @@ public class SudokuResolver {
                         }
 
                     }
-                    if (wrongAnswer==0)sudokuBoard.setSudokuNumber(cellNumber, k, n);
+                    if (wrongAnswer==0) sudokuBoard.setSudokuArray(cellNumber, k, n);
                     System.out.println(tempNumberofPrevieCell=board [k-1][n]);
-                    if (wrongAnswer==1) sudokuBoard.setSudokuNumber(0, k, n);
-                    if (wrongAnswer==1) sudokuBoard.setSudokuNumber(0, k-1, n);
+                    if (wrongAnswer==1) sudokuBoard.setSudokuArray(0, k, n);
+                    if (wrongAnswer==1) sudokuBoard.setSudokuArray(0, k-1, n);
                 }
             if(wrongAnswer==1) System.out.println("bad");;
             if(wrongAnswer==1) k = k-2;
@@ -47,6 +49,6 @@ public class SudokuResolver {
             }
 
         }
-        sudokuBoard.drawingTableWithToStringRowResult();
-    }
+        sudokuBoard.drawingSudokuTable();
+    } */
 }
