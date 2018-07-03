@@ -33,6 +33,5 @@ public class StreamOne {
                 .forEach(System.out::println);
 
         System.out.println("IntStream");
-
     }
 }
