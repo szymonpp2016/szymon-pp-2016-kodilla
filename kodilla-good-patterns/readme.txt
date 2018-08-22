@@ -1,0 +1,1 @@
+Folder contains: Mod_9_SOLID_RULE_IN_PRACTICE
