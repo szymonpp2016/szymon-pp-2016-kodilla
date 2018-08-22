@@ -1,4 +1,3 @@
-
  Shop: suplier1, product: pietruszka, zadanie wykonane: false
 
  Shop: suplier1, product: pietruszka, zadanie wykonane: false
