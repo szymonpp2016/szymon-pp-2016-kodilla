@@ -1,1 +1,1 @@
-Folder conatns: Mod_10_SPRING_IoC_DI_BEAN_SPRING_WEB
+Folder contains: Mod_10_SPRING_IoC_DI_BEAN_SPRING_WEB
