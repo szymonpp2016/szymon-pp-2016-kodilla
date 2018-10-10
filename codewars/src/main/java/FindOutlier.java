@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class FindOutlier {
 
-    private static int find(int[] integers) {
+    static int find(int[] integers) {
 
         int even[] = Arrays.stream(integers)
                 .filter(s->s%2==0)

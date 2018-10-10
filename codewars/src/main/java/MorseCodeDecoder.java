@@ -4,11 +4,11 @@ import java.util.stream.Collectors;
 public class MorseCodeDecoder {
 
 
-    private static String decode(String morseCode) {
+    public static String decode(String morseCode) {
         int signOfNextWord=-1;
         String answer="";
         morseCode=morseCode.replaceAll("\\s{3}", "  ");
-        String[] words = morseCode.replaceAll("\\s{3}", "  ").split(" ");
+        String[] words = morseCode.replaceAll("\\s{3}", "  ").split("\\ ");
 
         for(String name: words) {
             if(name.length()==0) {
@@ -42,7 +42,7 @@ public class MorseCodeDecoder {
     }
 
     private static String decodeWord(String word) {
-        return Arrays.stream(word.split(" ")).collect(Collectors.joining());
+        return Arrays.stream(word.split(" ")).map( s->s).collect(Collectors.joining());
     }  //FUNKCA MORSEDECODE była wpisana w FUNKCJE ZADANIA alinia powyżej brzmi wtedy jak poniżej:
 
     // return Arrays.stream(word.split(" ")).map(MorseCode::get).collect(Collectors.joining());

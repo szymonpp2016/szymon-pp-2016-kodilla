@@ -1,5 +1,7 @@
 public class NumberFun {
-    private static long findNxSquare(long sq) {
+
+
+    public static long findNextSquare(long sq) {
         int result;
         double findNextSquareDouble = Math.sqrt((double) sq);
         int findNextSquareInt = (int) Math.sqrt((double) sq);
@@ -9,11 +11,12 @@ public class NumberFun {
     }
 
     public static void main(String[] args) {
-        System.out.println(findNxSquare(121));
+        System.out.println(findNextSquare(121));
     }
 
 
 //best answer
+
     public class NumberFunBest {
         public long findNextSquare(long sq) {
             long root = (long) Math.sqrt(sq);

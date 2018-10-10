@@ -1,4 +1,8 @@
+
+
 public class DRoot {
+
+
     public static int digital_root(int n) {
 
         String nString= String.valueOf(n);
@@ -20,10 +24,14 @@ public class DRoot {
         }
         return sumDigital;}
 
+
  // rozwiazania
     public static int digital_rootBest(int n) {
         return (n != 0 && n%9 == 0) ? 9 : n % 9;
     }
+
+
+
 
     public static int digital_rootBest2(int n) {
         final int result = String.valueOf(n).chars().reduce(0, (acc, curr) -> acc + (curr - '0'));
