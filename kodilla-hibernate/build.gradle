@@ -30,4 +30,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-validation')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile('org.projectlombok:lombok') //lombok - adnotation
+	testCompile('junit:junit:4.12')
 }
